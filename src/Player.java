@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 /**
  * Author: Lucas Ying
- * Date: 12/07/22
+ * Date: 12/14/22
  */
 public class Player {
     private ArrayList<Card> hand;

@@ -1,6 +1,6 @@
 /**
  * Author: Lucas Ying
- * Date: 12/07/22
+ * Date: 12/14/22
  */
 
 public class Card {
@@ -14,22 +14,22 @@ public class Card {
         this.point = point;
     }
 
-    public void setRank() {
+    public void setRank(String rank) {
         this.rank = rank;
     }
-    public void setSuit() {
+    public void setSuit(String suit) {
         this.suit = suit;
     }
-    public void setPoint() {
+    public void setPoint(int point) {
         this.point = point;
     }
-    public String getRank(String rank) {
+    public String getRank() {
         return rank;
     }
-    public String getSuit(String suit) {
+    public String getSuit() {
         return suit;
     }
-    public int getPoint(int point) {
+    public int getPoint() {
         return point;
     }
     public String toString() {
