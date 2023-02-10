@@ -2,6 +2,7 @@
  * Author: Lucas Ying
  * Date: 12/14/22
  */
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -9,12 +10,14 @@ public class Deck {
     private ArrayList<Card> cards;
     private int cardsLeft;
 
-    public Deck(String[] ranks, String[] suits, int[] values) {
+    public Deck(String[] ranks, String[] suits, int[] values, GameViewer window) {
         cards = new ArrayList<Card>();
         //iterate through the suits and ranks and create the cards in the deck
         for(int i = 0; i < suits.length; i++) {
             for(int j = 0; j < ranks.length; j++) {
-                cards.add(new Card(ranks[j], suits[i], values[j]));
+                //keeps track of the correct image number with the card in the deck
+                int num = (j*4) + 1 + i;
+                cards.add(new Card(ranks[j], suits[i], values[j], new ImageIcon("Resources/Cards/"+num+".png").getImage(), window));
             }
         }
         // initiate the cards left as the 52 cards or size of cards in the deck
