@@ -1,0 +1,1 @@
+In order to play this game, simply enter "y" every time it asks for input. Then it should appear on the window which you can swipe over to. After this game has run and you enter "y" when prompted the game should run through and a winner of the game should be given. 
