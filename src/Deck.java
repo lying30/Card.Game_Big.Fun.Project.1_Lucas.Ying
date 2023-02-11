@@ -12,15 +12,16 @@ public class Deck {
 
     public Deck(String[] ranks, String[] suits, int[] values, GameViewer window) {
         cards = new ArrayList<Card>();
-        //iterate through the suits and ranks and create the cards in the deck
+        //Iterate through the suits and ranks and create the cards in the deck
         for(int i = 0; i < suits.length; i++) {
             for(int j = 0; j < ranks.length; j++) {
-                //keeps track of the correct image number with the card in the deck
+                //Keeps track of the correct image number with the card in the deck
                 int num = (j*4) + 1 + i;
+                //Adds card to the deck and makes a new card with following card parameters expected
                 cards.add(new Card(ranks[j], suits[i], values[j], new ImageIcon("Resources/Cards/"+num+".png").getImage(), window));
             }
         }
-        // initiate the cards left as the 52 cards or size of cards in the deck
+        //Initiate the cards left as the 52 cards or size of cards in the deck
         cardsLeft = cards.size();
         shuffle();
     }
